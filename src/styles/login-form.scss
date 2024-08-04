@@ -1,0 +1,101 @@
+.form {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--light-blue-1);
+    padding: 24px 24px 24px 24px;
+
+    &-container {
+        @include flex-column($gap: 4px);
+    }
+
+    &-header {
+        @include flex-center-end($gap: 0px);
+    }
+
+    &-close {
+        @include flex-center-center();
+
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+        background-color: var(--white);
+        border-radius: 10px;
+        border: none;
+
+        .test-icons {
+            color: var(--black);
+            font-size: 12px;
+        }
+    }
+
+    &-body {
+        @include flex-column($gap: 18px);
+    }
+
+    &-title {
+        color: var(--grey-2);
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .inputs-block {
+        @include flex-column($gap: 4px);
+    }
+
+    .input-basic {
+        border-radius: 10px;
+        height: 73px;
+        padding: 24px 24px 24px;
+        color: var(--blue-1);
+        font-size: 18px;
+        line-height: 500;
+
+        &::placeholder {
+            color: var(--blue-1);
+        }
+    }
+
+    .input-checkbox {
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        border: 2px solid var(--grey-2);
+        margin: 6px 0px 6px 0px;
+    }
+    .input-checkbox-label {
+        color: var(--grey-2);
+        font-size: 18px;
+    }
+
+    .recover-password {
+        color: var(--blue-2);
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    &-actions {
+        @include flex-column($gap: 4px);
+    }
+
+    .form-button {
+        height: 65px;
+        @include flex-center-center($gap: 0px);
+        border-radius: 4px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+
+        &.primary-button {
+            border: 1px solid var(--blue-2);
+            background: var(--blue-2);
+            color: var(--white);
+        }
+
+        &.secondary-button {
+            border: 1px solid var(--blue-2);
+            background: var(--white);
+            color: var(--blue-2);
+        }
+    }
+}

@@ -1,0 +1,337 @@
+@mixin d-flex(
+    $display: flex,
+    $justify-content: unset,
+    $align-items: unset,
+    $gap: 0px,
+    $flex-wrap: nowrap,
+    $flex: unset,
+    $flex-direction: row
+) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-column(
+    $display: flex,
+    $justify-content: unset,
+    $align-items: unset,
+    $gap: 10px,
+    $flex-wrap: nowrap,
+    $flex: unset,
+    $flex-direction: column
+) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+// justify-content: flex-start;
+
+@mixin flex-baseline-start($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-center-start($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-start-start($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-end-start($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+// justify-content: space-between;
+
+@mixin flex-baseline-between($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-unset-between($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: unset;
+    justify-content: space-between;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-start-between($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-center-between($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-end-between($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: end;
+    justify-content: space-between;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+// justify-content: center;
+
+@mixin flex-baseline-center($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: baseline;
+    justify-content: center;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-unset-center($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: unset;
+    justify-content: center;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-start-center($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-center-center($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-end-center($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-end;
+    justify-content: center;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+// justify-content: flex-end;
+
+@mixin flex-baseline-end($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-unset-end($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: unset;
+    justify-content: flex-end;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-start-end($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-center-end($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-end-end($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+// justify-content: space-around;
+
+@mixin flex-baseline-around($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-unset-around($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: unset;
+    justify-content: space-around;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-start-around($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-center-around($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: space-around;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-end-around($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+// justify-content: space-evenly;
+
+@mixin flex-baseline-evenly($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: baseline;
+    justify-content: space-evenly;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-unset-evenly($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: unset;
+    justify-content: space-evenly;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-start-evenly($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-center-evenly($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}
+
+@mixin flex-end-evenly($gap: 10px, $flex-wrap: nowrap, $flex: unset, $flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex: $flex;
+}

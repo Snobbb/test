@@ -1,0 +1,363 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 400;
+  font-size: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+a,
+a:hover,
+a:checked {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+:root {
+  --blue-1: #1f4284;
+  --blue-2: #244c98;
+  --blue-3: #1f4284;
+  --blue-4: #244c98;
+  --grey-1: #727272;
+  --grey-2: #323232;
+  --grey-3: #838383;
+  --light-blue-1: #f0f4fc;
+  --white: #ffffff;
+  --black: #000000;
+  --green-1: #16221d;
+  --green-2: #00e08a;
+  --green-3: #79fcca;
+}
+
+* {
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+body {
+  display: block;
+}
+body .container {
+  display: block;
+}
+
+.demo-version {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--light-blue-1);
+  margin: 36px 40px 36px 40px;
+}
+.demo-version-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: unset;
+  gap: 0px;
+  flex-wrap: nowrap;
+  flex: unset;
+  height: 455px;
+}
+.demo-version__left-block {
+  width: calc(50% + 10px);
+  padding: 102px 320px 102px 72px;
+}
+.demo-version__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 10px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
+.demo-version__title {
+  margin: 0px 0px 8px 0px;
+  color: var(--blue-1);
+  font-size: 26px;
+  font-weight: 500;
+}
+.demo-version__text {
+  margin: 0px 27px 26px 0px;
+  color: var(--grey-1);
+  font-size: 17px;
+}
+.demo-version__right-block {
+  width: calc(50% - 10px);
+  display: block;
+  background: #e6ebfe;
+}
+.demo-version__right-block img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope/Manrope-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope/Manrope-Regular.ttf");
+  font-weight: 500;
+}
+.form {
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--light-blue-1);
+  padding: 24px 24px 24px 24px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 4px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
+.form-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
+.form-close {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  flex: unset;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 10px;
+  border: none;
+}
+.form-close .test-icons {
+  color: var(--black);
+  font-size: 12px;
+}
+.form-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 18px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
+.form-title {
+  color: var(--grey-2);
+  font-size: 24px;
+  font-weight: 500;
+}
+.form .inputs-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 4px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
+.form .input-basic {
+  border-radius: 10px;
+  height: 73px;
+  padding: 24px 24px 24px;
+  color: var(--blue-1);
+  font-size: 18px;
+  line-height: 500;
+}
+.form .input-basic::placeholder {
+  color: var(--blue-1);
+}
+.form .input-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid var(--grey-2);
+  margin: 6px 0px 6px 0px;
+}
+.form .input-checkbox-label {
+  color: var(--grey-2);
+  font-size: 18px;
+}
+.form .recover-password {
+  color: var(--blue-2);
+  font-size: 20px;
+  font-weight: 500;
+}
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 4px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
+.form .form-button {
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-wrap: nowrap;
+  flex: unset;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+.form .form-button.primary-button {
+  border: 1px solid var(--blue-2);
+  background: var(--blue-2);
+  color: var(--white);
+}
+.form .form-button.secondary-button {
+  border: 1px solid var(--blue-2);
+  background: var(--white);
+  color: var(--blue-2);
+}
+
+/*# sourceMappingURL=index.css.map */
