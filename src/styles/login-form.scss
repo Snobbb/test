@@ -10,8 +10,8 @@
 
 .form {
     width: 500px;
-    background-color: var(--light-blue-1);
     padding: 24px 24px 24px 24px;
+    background-color: var(--light-blue-1);
 
     &-container {
         @include flex-column($gap: 4px);
@@ -24,17 +24,17 @@
     &-close {
         @include flex-center-center();
 
-        width: 52px;
         height: 52px;
+        width: 52px;
+        border: none;
+        border-radius: 10px;
         cursor: pointer;
         background-color: var(--white);
-        border-radius: 10px;
-        border: none;
 
         .test-icons {
+            transition: all 0.3s ease;
             color: var(--black);
             font-size: 24px;
-            transition: all 0.3s ease;
         }
 
         &:hover {
@@ -59,9 +59,9 @@
     }
 
     .input-basic {
-        border-radius: 10px;
         height: 73px;
         padding: 24px 24px 24px;
+        border-radius: 10px;
         color: var(--blue-1);
         font-size: 18px;
         line-height: 500;
@@ -76,11 +76,11 @@
     }
 
     .input-checkbox {
-        width: 18px;
         height: 18px;
-        border-radius: 2px;
-        border: 2px solid var(--grey-2);
+        width: 18px;
         margin: 6px 0px 6px 0px;
+        border: 2px solid var(--grey-2);
+        border-radius: 2px;
     }
 
     .input-checkbox-label {
@@ -100,14 +100,15 @@
     }
 
     .form-button {
-        height: 65px;
         @include flex-center-center($gap: 0px);
-        border-radius: 4px;
+
+        height: 65px;
         width: 100%;
+        border-radius: 4px;
         cursor: pointer;
+        transition: all 0.3s ease;
         font-size: 18px;
         font-weight: 500;
-        transition: all 0.3s ease;
 
         &.primary-button {
             border: 1px solid var(--blue-2);
@@ -137,5 +138,11 @@
         &:focus {
             box-shadow: 0px 0px 4px 0px var(--blue-1);
         }
+    }
+}
+
+@media (width < 768px) {
+    .form {
+        width: 100%;
     }
 }

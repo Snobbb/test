@@ -4,18 +4,12 @@
     font-weight: 400;
     line-height: 1.6;
 }
-body {
-    display: block;
-    .container {
-        display: block;
-    }
-}
 
 .demo-version {
     overflow: hidden;
+    margin: 36px 40px 36px 40px;
     border-radius: 10px;
     background-color: var(--light-blue-1);
-    margin: 36px 40px 36px 40px;
 
     &-container {
         @include d-flex($gap: 0px);
@@ -50,15 +44,15 @@ body {
     &__button {
         @include flex-center-between($gap: 20px);
 
-        padding: 12px 12px 12px 24px;
         height: 68px;
-        width: 100%;
         max-width: 340px;
-        background-color: var(--blue-2);
-        border-radius: 60px;
+        width: 100%;
+        padding: 12px 12px 12px 24px;
         border: none;
+        border-radius: 60px;
         cursor: pointer;
         transition: all 0.3s ease;
+        background-color: var(--blue-2);
 
         .button-text {
             color: var(--white);
@@ -69,14 +63,15 @@ body {
 
         .button-icon {
             @include flex-center-center();
+
             height: 44px;
             width: 44px;
             border-radius: 50%;
             background-color: var(--white);
 
             .test-icons {
-                font-size: 24px;
                 transition: all 0.3s ease;
+                font-size: 24px;
             }
         }
 
@@ -99,14 +94,14 @@ body {
     }
 
     &__right-block {
-        width: calc(50% - 10px);
         display: block;
+        width: calc(50% - 10px);
         background: #e6ebfe;
 
         img {
-            object-fit: contain;
-            width: 100%;
             height: 100%;
+            width: 100%;
+            object-fit: contain;
         }
     }
 }
@@ -142,9 +137,9 @@ body {
             }
 
             .button-icon {
+                height: 30px;
                 min-width: 30px;
                 width: 30px;
-                height: 30px;
             }
         }
     }

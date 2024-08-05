@@ -142,6 +142,16 @@ button:focus {
   outline: none;
 }
 
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/Manrope/Manrope-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/Manrope/Manrope-Regular.ttf");
+  font-weight: 500;
+}
 :root {
   --blue-1: #1f4284;
   --blue-2: #244c98;
@@ -162,18 +172,11 @@ button:focus {
   line-height: 1.6;
 }
 
-body {
-  display: block;
-}
-body .container {
-  display: block;
-}
-
 .demo-version {
   overflow: hidden;
+  margin: 36px 40px 36px 40px;
   border-radius: 10px;
   background-color: var(--light-blue-1);
-  margin: 36px 40px 36px 40px;
 }
 .demo-version-container {
   display: flex;
@@ -218,15 +221,15 @@ body .container {
   gap: 20px;
   flex-wrap: nowrap;
   flex: unset;
-  padding: 12px 12px 12px 24px;
   height: 68px;
-  width: 100%;
   max-width: 340px;
-  background-color: var(--blue-2);
-  border-radius: 60px;
+  width: 100%;
+  padding: 12px 12px 12px 24px;
   border: none;
+  border-radius: 60px;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: var(--blue-2);
 }
 .demo-version__button .button-text {
   color: var(--white);
@@ -248,8 +251,8 @@ body .container {
   background-color: var(--white);
 }
 .demo-version__button .button-icon .test-icons {
-  font-size: 24px;
   transition: all 0.3s ease;
+  font-size: 24px;
 }
 .demo-version__button:hover {
   background-color: #365fac;
@@ -265,14 +268,14 @@ body .container {
   color: #3e6abb;
 }
 .demo-version__right-block {
-  width: calc(50% - 10px);
   display: block;
+  width: calc(50% - 10px);
   background: #e6ebfe;
 }
 .demo-version__right-block img {
-  object-fit: contain;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 @media (width < 991px) {
@@ -298,20 +301,10 @@ body .container {
     white-space: normal;
   }
   .demo-version__button .button-icon {
+    height: 30px;
     min-width: 30px;
     width: 30px;
-    height: 30px;
   }
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("/src/assets/fonts/Manrope/Manrope-Regular.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("/src/assets/fonts/Manrope/Manrope-Regular.ttf");
-  font-weight: 500;
 }
 #overlay {
   max-width: 80vw;
@@ -324,8 +317,8 @@ body .container {
 
 .form {
   width: 500px;
-  background-color: var(--light-blue-1);
   padding: 24px 24px 24px 24px;
+  background-color: var(--light-blue-1);
 }
 .form-container {
   display: flex;
@@ -353,17 +346,17 @@ body .container {
   gap: 10px;
   flex-wrap: nowrap;
   flex: unset;
-  width: 52px;
   height: 52px;
+  width: 52px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
   background-color: var(--white);
-  border-radius: 10px;
-  border: none;
 }
 .form-close .test-icons {
+  transition: all 0.3s ease;
   color: var(--black);
   font-size: 24px;
-  transition: all 0.3s ease;
 }
 .form-close:hover .test-icons {
   transform: rotate(180deg);
@@ -392,9 +385,9 @@ body .container {
   flex: unset;
 }
 .form .input-basic {
-  border-radius: 10px;
   height: 73px;
   padding: 24px 24px 24px;
+  border-radius: 10px;
   color: var(--blue-1);
   font-size: 18px;
   line-height: 500;
@@ -412,11 +405,11 @@ body .container {
   flex: unset;
 }
 .form .input-checkbox {
-  width: 18px;
   height: 18px;
-  border-radius: 2px;
-  border: 2px solid var(--grey-2);
+  width: 18px;
   margin: 6px 0px 6px 0px;
+  border: 2px solid var(--grey-2);
+  border-radius: 2px;
 }
 .form .input-checkbox-label {
   color: var(--grey-2);
@@ -438,7 +431,6 @@ body .container {
   flex: unset;
 }
 .form .form-button {
-  height: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -446,12 +438,13 @@ body .container {
   gap: 0px;
   flex-wrap: nowrap;
   flex: unset;
-  border-radius: 4px;
+  height: 65px;
   width: 100%;
+  border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s ease;
   font-size: 18px;
   font-weight: 500;
-  transition: all 0.3s ease;
 }
 .form .form-button.primary-button {
   border: 1px solid var(--blue-2);
@@ -475,6 +468,12 @@ body .container {
 }
 .form .form-button:focus {
   box-shadow: 0px 0px 4px 0px var(--blue-1);
+}
+
+@media (width < 768px) {
+  .form {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
