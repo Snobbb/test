@@ -25,11 +25,13 @@ body {
 
     &__left-block {
         width: calc(50% + 10px);
-        padding: 102px 320px 102px 72px;
+        padding: 102px 72px 102px 72px;
     }
 
     &__content {
         @include flex-column($gap: 10px);
+
+        max-width: 538px;
     }
 
     &__title {
@@ -45,6 +47,57 @@ body {
         font-size: 17px;
     }
 
+    &__button {
+        @include flex-center-between($gap: 20px);
+
+        padding: 12px 12px 12px 24px;
+        height: 68px;
+        width: 100%;
+        max-width: 340px;
+        background-color: var(--blue-2);
+        border-radius: 60px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .button-text {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .button-icon {
+            @include flex-center-center();
+            height: 44px;
+            width: 44px;
+            border-radius: 50%;
+            background-color: var(--white);
+
+            .test-icons {
+                font-size: 24px;
+                transition: all 0.3s ease;
+            }
+        }
+
+        &:hover {
+            background-color: #365fac;
+
+            .test-icons {
+                transform: translate3d(3px, -3px, 0px);
+                color: #365fac;
+            }
+        }
+
+        &:active {
+            background-color: #3e6abb;
+
+            .test-icons {
+                color: #3e6abb;
+            }
+        }
+    }
+
     &__right-block {
         width: calc(50% - 10px);
         display: block;
@@ -54,6 +107,45 @@ body {
             object-fit: contain;
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+@media (width < 991px) {
+    .demo-version {
+        &-container {
+            flex-direction: column;
+            height: auto;
+        }
+
+        &__left-block,
+        &__right-block {
+            width: 100%;
+        }
+
+        &__left-block {
+            padding: 24px 24px 18px 24px;
+        }
+    }
+}
+
+@media (width < 450px) {
+    .demo-version {
+        &__button {
+            gap: 5px;
+            height: auto;
+            max-width: 100%;
+
+            .button-text {
+                font-size: 14px;
+                white-space: normal;
+            }
+
+            .button-icon {
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }

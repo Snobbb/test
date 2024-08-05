@@ -1,6 +1,15 @@
+#overlay {
+    max-width: 80vw;
+    padding: 0px 0px 0px 0px;
+    border: none;
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.616);
+    }
+}
+
 .form {
-    max-width: 500px;
-    width: 100%;
+    width: 500px;
     background-color: var(--light-blue-1);
     padding: 24px 24px 24px 24px;
 
@@ -24,7 +33,14 @@
 
         .test-icons {
             color: var(--black);
-            font-size: 12px;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            .test-icons {
+                transform: rotate(180deg);
+            }
         }
     }
 
@@ -55,6 +71,10 @@
         }
     }
 
+    .checkbox-basic {
+        @include flex-center-start($gap: 10px);
+    }
+
     .input-checkbox {
         width: 18px;
         height: 18px;
@@ -62,12 +82,14 @@
         border: 2px solid var(--grey-2);
         margin: 6px 0px 6px 0px;
     }
+
     .input-checkbox-label {
         color: var(--grey-2);
         font-size: 18px;
     }
 
     .recover-password {
+        margin: 0px 0px 32px 0px;
         color: var(--blue-2);
         font-size: 20px;
         font-weight: 500;
@@ -85,17 +107,35 @@
         cursor: pointer;
         font-size: 18px;
         font-weight: 500;
+        transition: all 0.3s ease;
 
         &.primary-button {
             border: 1px solid var(--blue-2);
             background: var(--blue-2);
             color: var(--white);
+
+            &:hover {
+                background: #365fac;
+            }
+
+            &:active {
+                background: #3e6abb;
+            }
         }
 
         &.secondary-button {
             border: 1px solid var(--blue-2);
             background: var(--white);
             color: var(--blue-2);
+
+            &:hover {
+                background: var(--blue-2);
+                color: var(--white);
+            }
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 4px 0px var(--blue-1);
         }
     }
 }

@@ -1,3 +1,4 @@
+@import "../assets/fonts/Test-icon/style.css";
 html,
 body,
 div,
@@ -152,9 +153,6 @@ button:focus {
   --light-blue-1: #f0f4fc;
   --white: #ffffff;
   --black: #000000;
-  --green-1: #16221d;
-  --green-2: #00e08a;
-  --green-3: #79fcca;
 }
 
 * {
@@ -189,7 +187,7 @@ body .container {
 }
 .demo-version__left-block {
   width: calc(50% + 10px);
-  padding: 102px 320px 102px 72px;
+  padding: 102px 72px 102px 72px;
 }
 .demo-version__content {
   display: flex;
@@ -199,6 +197,7 @@ body .container {
   gap: 10px;
   flex-wrap: nowrap;
   flex: unset;
+  max-width: 538px;
 }
 .demo-version__title {
   margin: 0px 0px 8px 0px;
@@ -211,6 +210,60 @@ body .container {
   color: var(--grey-1);
   font-size: 17px;
 }
+.demo-version__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex: unset;
+  padding: 12px 12px 12px 24px;
+  height: 68px;
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--blue-2);
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.demo-version__button .button-text {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.demo-version__button .button-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  flex: unset;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.demo-version__button .button-icon .test-icons {
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.demo-version__button:hover {
+  background-color: #365fac;
+}
+.demo-version__button:hover .test-icons {
+  transform: translate3d(3px, -3px, 0px);
+  color: #365fac;
+}
+.demo-version__button:active {
+  background-color: #3e6abb;
+}
+.demo-version__button:active .test-icons {
+  color: #3e6abb;
+}
 .demo-version__right-block {
   width: calc(50% - 10px);
   display: block;
@@ -222,6 +275,34 @@ body .container {
   height: 100%;
 }
 
+@media (width < 991px) {
+  .demo-version-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .demo-version__left-block, .demo-version__right-block {
+    width: 100%;
+  }
+  .demo-version__left-block {
+    padding: 24px 24px 18px 24px;
+  }
+}
+@media (width < 450px) {
+  .demo-version__button {
+    gap: 5px;
+    height: auto;
+    max-width: 100%;
+  }
+  .demo-version__button .button-text {
+    font-size: 14px;
+    white-space: normal;
+  }
+  .demo-version__button .button-icon {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
 @font-face {
   font-family: "Manrope";
   src: url("/src/assets/fonts/Manrope/Manrope-Regular.ttf");
@@ -232,9 +313,17 @@ body .container {
   src: url("/src/assets/fonts/Manrope/Manrope-Regular.ttf");
   font-weight: 500;
 }
+#overlay {
+  max-width: 80vw;
+  padding: 0px 0px 0px 0px;
+  border: none;
+}
+#overlay::backdrop {
+  background: rgba(0, 0, 0, 0.616);
+}
+
 .form {
-  max-width: 500px;
-  width: 100%;
+  width: 500px;
   background-color: var(--light-blue-1);
   padding: 24px 24px 24px 24px;
 }
@@ -273,7 +362,11 @@ body .container {
 }
 .form-close .test-icons {
   color: var(--black);
-  font-size: 12px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.form-close:hover .test-icons {
+  transform: rotate(180deg);
 }
 .form-body {
   display: flex;
@@ -309,6 +402,15 @@ body .container {
 .form .input-basic::placeholder {
   color: var(--blue-1);
 }
+.form .checkbox-basic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+  flex: unset;
+}
 .form .input-checkbox {
   width: 18px;
   height: 18px;
@@ -321,6 +423,7 @@ body .container {
   font-size: 18px;
 }
 .form .recover-password {
+  margin: 0px 0px 32px 0px;
   color: var(--blue-2);
   font-size: 20px;
   font-weight: 500;
@@ -348,16 +451,30 @@ body .container {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 .form .form-button.primary-button {
   border: 1px solid var(--blue-2);
   background: var(--blue-2);
   color: var(--white);
 }
+.form .form-button.primary-button:hover {
+  background: #365fac;
+}
+.form .form-button.primary-button:active {
+  background: #3e6abb;
+}
 .form .form-button.secondary-button {
   border: 1px solid var(--blue-2);
   background: var(--white);
   color: var(--blue-2);
+}
+.form .form-button.secondary-button:hover {
+  background: var(--blue-2);
+  color: var(--white);
+}
+.form .form-button:focus {
+  box-shadow: 0px 0px 4px 0px var(--blue-1);
 }
 
 /*# sourceMappingURL=index.css.map */

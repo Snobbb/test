@@ -19,12 +19,12 @@
                   так же, не менее 2500 средних и малых проектов. Используя
                   знания и накопленный опыт мы можем предложить
                 </div>
-                <button class="demo-version__button">
-                  <a href="./login-form/login-form.html">
-                    <span class="button-text">Попробовать бесплатно</span>
-                    <span class="button-icon"></span>
-                  </a>
-                </button>
+                <div id="openOverlayPopupButton" class="demo-version__button">
+                  <span class="button-text">Попробовать бесплатно</span>
+                  <div class="button-icon">
+                    <span class="test-icons icon-arrow-up-right"></span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="demo-version__right-block">
@@ -34,6 +34,55 @@
         </article>
       </div>
     </div>
-    <div class="overlay"></div>
+    <dialog id="overlay" class="overlay">
+      <form class="form login">
+        <div class="form-container">
+          <div class="form-header">
+            <div class="form-close" id="closeOverlayPopupButton">
+              <span class="test-icons icon-close"></span>
+            </div>
+          </div>
+          <div class="form-body">
+            <div class="form-title">Войти в систему</div>
+            <div class="inputs-block">
+              <input
+                class="input-basic"
+                type="text"
+                placeholder="Email/Телефон"
+              />
+              <input
+                class="input-basic"
+                type="password"
+                name=""
+                placeholder="Пароль"
+              />
+            </div>
+            <div class="checkbox-basic">
+              <input
+                class="input-checkbox"
+                type="checkbox"
+                name="rememberMe"
+                id="rememberMe"
+              />
+              <label class="input-checkbox-label" for="rememberMe"
+                >Запомнить пароль</label
+              >
+            </div>
+            <a class="link recover-password" href="#">Восстановить</a>
+          </div>
+          <div class="form-footer">
+            <div class="form-actions">
+              <button type="submit" class="form-button primary-button">
+                <span class="button-text">Войти</span>
+              </button>
+              <button class="form-button secondary-button">
+                <span class="button-text">Зарегистрироваться</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </dialog>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
